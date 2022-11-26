@@ -76,7 +76,7 @@ body {
 }
 
 .tic-tac-toe [aria-label="Emmi"] {
-	background-image: url('Bilder/EmmiT.png');
+	background-image: url('bilder/emmit.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 
@@ -84,19 +84,19 @@ body {
 }
 
 .tic-tac-toe [aria-label="Fine"]{
-	background-image: url('Bilder/FineT.png');
+	background-image: url('bilder/finet.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
 
 .tic-tac-toe [aria-label="Molly"]{
-	background-image: url('Bilder/MollyT.png');
+	background-image: url('bilder/mollyt.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
 
 .tic-tac-toe [aria-label="Odin"]{
-	background-image: url('Bilder/OdinT.png');
+	background-image: url('Bilder/odint.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
