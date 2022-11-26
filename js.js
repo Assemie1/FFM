@@ -1,4 +1,4 @@
-
+//Festlegen der Grund Variablen
 var Amzug = 1;
 var Spielzug = 0;
 var Sperren = false;
@@ -6,7 +6,7 @@ var Katze1 = null;
 var Katze2 = null;
 var Möglich = 0;
 
-
+// Wenn Molly gedrückt sie als Katze Spieler auswählen und Odin deaktiviern
 document.getElementById("Molly").onclick = function() {
   
   document.getElementById("Odin").disabled = true;
@@ -16,6 +16,7 @@ document.getElementById("Molly").onclick = function() {
 
 };
 
+// Wenn Odin gedrückt sie als Katze Spieler auswählen und Molly deaktiviern
 document.getElementById("Odin").onclick = function() {
   
   document.getElementById("Molly").disabled = true;
@@ -26,6 +27,7 @@ document.getElementById("Odin").onclick = function() {
 
 };
 
+// Wenn Emmi gedrückt sie als Katze Spieler auswählen und Fine deaktiviern
 document.getElementById("Emmi").onclick = function() {
   
   document.getElementById("Fine").disabled = true;
@@ -36,6 +38,7 @@ document.getElementById("Emmi").onclick = function() {
 
 };
 
+// Wenn Fine gedrückt sie als Katze Spieler auswählen und Emmi deaktiviern
 document.getElementById("Fine").onclick = function() {
   
   document.getElementById("Emmi").disabled = true;
@@ -47,6 +50,7 @@ document.getElementById("Fine").onclick = function() {
 
 };
 
+// Wenn noch keine zwei Katzen ausgewählt wurden Spielfeld deaktiviert
 if (Möglich <2){
   var Spielfeld1 = document.getElementById("1")
         Spielfeld1.disabled=true
@@ -66,10 +70,12 @@ if (Möglich <2){
         Spielfeld8.disabled=true
         var Spielfeld9 = document.getElementById("9")
         Spielfeld9.disabled=true
-        console.log("ESGEHT NICHT")
+        
 
 
 }
+
+//Wenn zwei Katzen ausgewählt sind Spielfeld aktivieren
 function MöglichFunc () {
   if (Möglich == 2){
     var Spielfeld1 = document.getElementById("1")
@@ -90,22 +96,27 @@ function MöglichFunc () {
         Spielfeld8.disabled=false
         var Spielfeld9 = document.getElementById("9")
         Spielfeld9.disabled=false
-        console.log("ES GEHT")
+        
   }
+  //Hinweise1 an ersten Zug anpassen
   AP.textContent = "Es beginnt "+ Katze2 
 
 }
+
+//Listenener hinzufügen
 document.addEventListener('DOMContentLoaded', function () {
-	  
+
+	//Welcher Knopf wrude gedrückt
   document.querySelector('#gameboard').addEventListener('click',  markField);	  
   
+  //Hinweis1 für passenden Zug anpassen, Feld deaktiviern
   function markField (e) { 
     const AP = document.getElementById("AP");
     var field = e.target;
     
     console.log(field);
   
-    
+    //Welcher Spieler ist dran und welche Katze gewählt und füllen des Feldes mit entsprechendm aria-label
     if (Amzug % 2 == 0 && Katze1 == "Molly"){
       field.setAttribute('aria-label','Molly'); 
       AP.textContent = Katze2 +" ist am Zug";
@@ -132,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
       field.disabled = true;
     }
 
+    //Anpassen Variablen Welcher Spieler, Zählen Spielzüge und Abfrage Ende Funktion. 
     Amzug = Amzug + 1  
     Spielzug = Spielzug + 1
     Ende()
@@ -140,9 +152,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
   }
 
+  //Abfrage ob ein Sieler gewonnen hat
   function Ende () {
     var fields = document.querySelectorAll('#gameboard button')
 
+    //Spielende wenn alle Felder voll sind
     for (var i = 0; i <3; i++){
       if (Spielzug == 9){
         console.log("Funktioniert")
@@ -150,7 +164,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+
       for (i = 0; i<3; i++){
+        //Überprüfen Vertikal
         if (fields[0+i].getAttribute("aria-label") != "" && 
         fields[0+i].getAttribute("aria-label") == fields[3+i].getAttribute("aria-label") && 
         fields[3+i].getAttribute("aria-label") == fields[6+i].getAttribute("aria-label")){
@@ -159,16 +175,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         }
+
+        // Überprüfen Horizontal
         if (fields[i * 3].getAttribute('aria-label') != "" && 
           fields[i * 3].getAttribute('aria-label') == fields[i * 3 + 1].getAttribute('aria-label') &&
           fields[i * 3 + 1].getAttribute('aria-label') == fields[i * 3 + 2].getAttribute('aria-label')) {
-          AP.textContent = fields[i * 3].getAttribute('aria-label') + " hat gewonnen!!!";
+          AP.textContent = fields[i * 3].getAttribute('aria-label') + " hat gewonnenH!!!";
           Sperren = true;
 
         }
         
 
       }
+      //Überprüfen diagonal oben links nach unten rechts
       if (fields[0].getAttribute('aria-label') != "" && 
           fields[0].getAttribute('aria-label') == fields[4].getAttribute('aria-label') &&
           fields[4].getAttribute('aria-label') == fields[8].getAttribute('aria-label')) {
@@ -176,6 +195,8 @@ document.addEventListener('DOMContentLoaded', function () {
           Sperren = true;
 
         }
+      
+      //Überprüfen diagonal oben rechts nach unten links
       if (fields[2].getAttribute('aria-label') != "" && 
         fields[2].getAttribute('aria-label') == fields[4].getAttribute('aria-label') &&
         fields[4].getAttribute('aria-label') == fields[6].getAttribute('aria-label')) {
@@ -184,7 +205,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
       }
-
+      
+      // Wenn ein Spieler gewonnen hat restlichen/alle Buttons deaktivieren.
       if(Sperren == true){
         var Spielfeld1 = document.getElementById("1")
         Spielfeld1.disabled=true
