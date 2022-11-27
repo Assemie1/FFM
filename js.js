@@ -6,6 +6,8 @@ var Katze1 = null;
 var Katze2 = null;
 var Möglich = 0;
 
+document.getElementById("Refresh").disabled = true;
+
 // Wenn Molly gedrückt sie als Katze Spieler auswählen und Odin deaktiviern
 document.getElementById("Molly").onclick = function() {
   
@@ -161,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (Spielzug == 9){
         console.log("Funktioniert")
         AP.textContent = "Unentschieden!";
+        Sperren = true;
       }
     }
 
@@ -227,6 +230,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var Spielfeld9 = document.getElementById("9")
         Spielfeld9.disabled=true
         
+        //NeuesSpiel Knopf anschalten
+        document.getElementById("Refresh").disabled = false;
 
       }
      
@@ -243,6 +248,15 @@ document.addEventListener('DOMContentLoaded', function () {
 );
 
 
+
+
+// Wenn gedrückt Seite wird neu geladen
+document.getElementById("Refresh").onclick = function() {
+  
+  location.reload();
+
+
+};
 
 
 

@@ -187,10 +187,33 @@ color: white;
   text-align: center;
   font-size: 1.5vw;
   font-weight: bold;
+  margin-bottom: 1%;
+}
+
+/* Anpassen des allgemeinen Auswahlmenü */
+.NeuesSpiel{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2vw;;
   margin-bottom: 5%;
+  
 }
 
 
+/* Anpassen der Knöpfe zur Auswahl der Katzen */
+.NeuesSpiel button{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 10%;
+  height: auto;
+  background-color: rgb(154, 206, 223);
+  border: none;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 
 
 /*FOOTER*/
