@@ -86,26 +86,60 @@ background-color: rgb(145, 210, 144);
 color: white;
 }
 
-
 /*Seiten Überschrift*/
-.StartText{
-text-align: center;
-
-}
-
 .TextAnfang{
-    text-align: center;
-    margin-bottom: 100px;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: bolder;
+  margin-bottom: 2.5%;
+  margin-top: 5%;
 }
 
-/* Bild 1*/
-/* Festlegung Größe und Position */
+/*Bild Links*/
+.BildLinks{
 
-img{
-  max-width: 30%;
-  height: auto;
+margin-left: 15%;
+margin-right: 15%;
+margin-bottom: 5%;
+display: inline-block;
+
 }
- 
+
+.BildLinks img{
+width: 30%;
+height: auto;
+float: left;
+padding-right: 2.5%;
+
+
+}
+
+.BildLinks a{
+font-size: 1.5vw;
+}
+
+
+/*Bild Rechts*/
+.BildRechts{
+
+margin-left: 15%;
+margin-right: 15%;
+margin-bottom: 5%;
+display: inline-block;
+
+}
+
+.BildRechts img{
+width: 30%;
+height: auto;
+float: right;
+padding-left: 2.5%;
+
+}
+
+.BildRechts a{
+font-size: 1.5vw;
+}
 
 
 
