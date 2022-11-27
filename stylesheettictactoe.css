@@ -1,64 +1,132 @@
-  /* BODY */
 
+/* Festlegung Allgemeines Seiten Layout */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Body einstellungen */
 body {
-    background-color: rgb(255, 105, 97);
-  }
+  height: 100%;
+  background-color: rgb(255, 105, 97);
+  background-size: cover;
 
-  /* NAVBAR */
-  /* Add a black background color to the top navigation */
-.topnav {
-  background-color: rgb(154, 206, 223);
-  overflow: hidden;
+  
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+/* NAVBAR */
+
+/* Abstand oberkante */
+nav{
+padding-top: 15px;
+
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: rgb(111, 183, 214);
-  color: black;
+/* Einstellen des Bandes */
+nav ul{
+width: 100%;
+float: left;
+background-color: rgb(154, 206, 223);
+
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: rgb(145, 210, 144);
-  color: white;
+/* Oberpunkte anordnen */
+nav ul li{
+float:left;
+list-style: none;
+position: relative;
+
+/* Schrift Anpassen */
+}
+nav ul li a{
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 20px;
+display: block;
 }
 
+/* Farbeffekt drüber Hovern */
+nav a:hover {
+background-color: rgb(111, 183, 214);
+color: black;
+}
+
+/* Unterpunkte anordnen und Unsichtbar machen */
+nav ul li ul{
+
+display: none;
+position: absolute;
+
+}
+
+/* Unterpunkte anordnen der List elemente */
+nav ul li ul li {
+float: left;
+width: 100%;
+
+}
+
+/* Unterpunkte beim Hovern erscheinen lassen */
+
+nav ul li:hover ul{
+display: block;
+
+}
+
+/* Schriftfarbe Hover ändern */
+nav ul li ul li a:hover{
+color: black;
+}
+
+/* Active Seite anders Färben */
+nav a.active {
+background-color: rgb(145, 210, 144);
+color: white;
+}
+
+/* Seitenüberschrift */
 #Spielregeln{
+  margin-top: 5%;
   text-align: center;
-  font-size: 50px;
+  font-size: 3vw;
   font-weight: bolder;
+  margin-bottom: 2.5%;
   
   
 }
 
+/* Anpassen des allgemeinen Auswahlmenü */
 .Auswahl{
   text-align: center;
   font-weight: bold;
-  font-size: 35px;;
+  font-size: 2vw;;
+  
 }
 
+
+/* Anpassen der Knöpfe zur Auswahl der Katzen */
 .Auswahl button{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 10%;
+  height: auto;
   background-color: rgb(154, 206, 223);
   border: none;
-  font-size: 20px;
+  text-align: center;
+  font-size: 1.5vw;
   font-weight: bold;
-  padding: 15px 30px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
+/* Design des Spielfeldes */
 .tic-tac-toe #gameboard {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 1%;
+  margin-bottom: 1%;
   width: 60vmin;
   height: 60vmin;
   display: grid;
@@ -66,6 +134,7 @@ body {
   gap: 0;
 }
 
+/* Anpassen der unsichtbaren Knöpfe */
 .tic-tac-toe button {
   width:20vmin;
   height: 20vmin;
@@ -75,6 +144,7 @@ body {
   font: 0/0 transparent;
 }
 
+/* Aria Label Emmi */
 .tic-tac-toe [aria-label="Emmi"] {
 	background-image: url('bilder/emmit.png');
   background-size: 20vmin;
@@ -83,35 +153,41 @@ body {
   
 }
 
+/* Aria Label Fine */
 .tic-tac-toe [aria-label="Fine"]{
 	background-image: url('bilder/finet.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
 
+/* Aria Label Molly */
 .tic-tac-toe [aria-label="Molly"]{
 	background-image: url('bilder/mollyt.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
 
+/* Aria Label Odin */
 .tic-tac-toe [aria-label="Odin"]{
-	background-image: url('Bilder/odint.png');
+	background-image: url('Bilder/Odint.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
 
-
+/* Hinweis 1 */
 #AP {
   text-align: center;
-  font-size: 40px;
+  font-size: 2vw;
   font-weight: bold;
+  margin-bottom: 1%;
 }
 
+/* Hinweis 2 */
 #AP2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5vw;
   font-weight: bold;
+  margin-bottom: 5%;
 }
 
 
@@ -119,10 +195,17 @@ body {
 
 /*FOOTER*/
 footer {
+  padding-bottom: 15px;
   text-align: center;
   position:relative;
-  bottom: 0;
   width: 100%;
-  height: 60px;
+  
+  
+  
+}
+
+footer p{
   background-color: rgb(154, 206, 223);
+  font-size: 20px;
+
 }

@@ -1,60 +1,134 @@
-  /* BODY */
 
+/* Festlegung Allgemeines Seiten Layout */
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+/* Body einstellungen */
 body {
+    height: 100%;
     background-color: rgb(255, 105, 97);
+    background-size: cover;
+
+    
   }
 
   /* NAVBAR */
-  /* Add a black background color to the top navigation */
-.topnav {
-  background-color: rgb(154, 206, 223);
-  overflow: hidden;
+
+/* Abstand oberkante */
+nav{
+  padding-top: 15px;
+
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Einstellen des Bandes */
+nav ul{
+  width: 100%;
   float: left;
+  background-color: rgb(154, 206, 223);
+  
+}
+
+/* Oberpunkte anordnen */
+nav ul li{
+  float:left;
+  list-style: none;
+  position: relative;
+
+/* Schrift Anpassen */
+}
+nav ul li a{
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  display: block;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+/* Farbeffekt drüber Hovern */
+nav a:hover {
   background-color: rgb(111, 183, 214);
   color: black;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
+/* Unterpunkte anordnen und Unsichtbar machen */
+nav ul li ul{
+  
+  display: none;
+  position: absolute;
+  
+}
+
+/* Unterpunkte anordnen der List elemente */
+nav ul li ul li {
+  float: left;
+  width: 100%;
+  
+}
+
+/* Unterpunkte beim Hovern erscheinen lassen */
+
+nav ul li:hover ul{
+  display: block;
+  
+}
+
+/* Schriftfarbe Hover ändern */
+nav ul li ul li a:hover{
+  color: black;
+}
+
+/* Active Seite anders Färben */
+nav a.active {
   background-color: rgb(145, 210, 144);
   color: white;
 }
 
-/*TEXT HOME*/
-.StartText{
+
+/*Wilkommens Text*/
+#StartText{
+  margin-top: 15%;
+  font-weight: bolder;
   text-align: center;
+  font-size: 2vw;
+  margin-top: 70px;
+  margin-bottom: 5%;
 
 }
 
 
-/*BILDER HOME*/
+/*Start Bild*/
 
-.BilderHome {
+.BilderHome { 
+  margin-top: 5%;
+  margin-bottom: 5%;
   text-align: center;
   
-
 }
 
-/*FOOTER*/
+.BilderHome img{
+  width: 40%;
+  height: auto;
+  
+}
+  
+
+/*Footer*/
 footer {
+  padding-bottom: 15px;
   text-align: center;
   position:relative;
-  bottom: 0;
   width: 100%;
-  height: 60px;
+  
+  
+  
+}
+
+footer p{
   background-color: rgb(154, 206, 223);
+  font-size: 20px;
+
 }
 

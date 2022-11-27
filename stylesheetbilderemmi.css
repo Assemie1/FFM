@@ -1,0 +1,131 @@
+
+/* Festlegung Allgemeines Seiten Layout */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Body einstellungen */
+body {
+  height: 100%;
+  background-color: rgb(255, 105, 97);
+  background-size: cover;
+
+  
+}
+
+/* NAVBAR */
+
+/* Abstand oberkante */
+nav{
+padding-top: 15px;
+
+}
+
+/* Einstellen des Bandes */
+nav ul{
+width: 100%;
+float: left;
+background-color: rgb(154, 206, 223);
+
+}
+
+/* Oberpunkte anordnen */
+nav ul li{
+float:left;
+list-style: none;
+position: relative;
+
+/* Schrift Anpassen */
+}
+nav ul li a{
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 20px;
+display: block;
+}
+
+/* Farbeffekt drüber Hovern */
+nav a:hover {
+background-color: rgb(111, 183, 214);
+color: black;
+}
+
+/* Unterpunkte anordnen und Unsichtbar machen */
+nav ul li ul{
+
+display: none;
+position: absolute;
+
+}
+
+/* Unterpunkte anordnen der List elemente */
+nav ul li ul li {
+float: left;
+width: 100%;
+
+}
+
+/* Unterpunkte beim Hovern erscheinen lassen */
+
+nav ul li:hover ul{
+display: block;
+
+}
+
+/* Schriftfarbe Hover ändern */
+nav ul li ul li a:hover{
+color: black;
+}
+
+/* Active Seite anders Färben */
+nav a.active {
+background-color: rgb(145, 210, 144);
+color: white;
+}
+
+/*Seiten Überschrift*/
+.StartText{
+text-align: center;
+
+}
+
+.TextAnfang{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.Bild1{
+ 
+  margin-left: 15%;
+  margin-bottom: 5%;
+  display: block;
+}
+
+.Bild1 img{
+  width: 30%;
+  height: auto;
+  
+}
+
+
+
+
+/*FOOTER*/
+footer {
+  padding-bottom: 15px;
+  text-align: center;
+  position:relative;
+  width: 100%;
+  
+  
+  
+}
+
+footer p{
+  background-color: rgb(154, 206, 223);
+  font-size: 20px;
+
+}

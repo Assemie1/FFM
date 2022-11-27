@@ -6,18 +6,29 @@
         <title>Emmi und Fine Tribute</title>
         
 
+
+
       </head>
 <body >
 
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="bilder.html">Bilder</a>
-    <a class="active" href="tictactoe.html">CatTacToe</a>
-    
-  </div>
+  <!--Navbar-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a  href="bilder.html">Bilder</a>
+        <ul>
+          <li><a href="bilderemmi.html">Emmi</a></li>
+          <li><a href="bilderfine.html">Fine</a></li>
+        </ul>
+      </li>
+      <li><a class="active" href="tictactoe.html">CatTacToe</a></li>
+    </ul>    
+  </nav>
 
+  <!--Seitenüberschrift-->
   <p id="Spielregeln">CatTacToe ist selbsterklärend. Wer das nicht so weiß ist einfach zu blöd</p>
 
+  <!--Auswahlmenü Katzen-->
   <div class="Auswahl">
     <p>Wählt eure Katzen!</p>
     <button id="Emmi">Emmi</button>
@@ -28,6 +39,7 @@
   </div>
 
 
+  <!--Spielfeld-->
 
   <div class="tic-tac-toe" aria-describedby="hint">
     
@@ -45,16 +57,20 @@
     <button id="9" aria-label="">C3</button>	
     
     </div>
+
+    <!--Hinweise-->
     <p id="AP">Ihr könnt erst beginnen wenn ihr eure Katzen gewählt habt</p>
     <p id="AP2">Zum neustarten Seite neu laden</p>
     
   </div>
  
   
-  
+  <!--Link zu JS-->
   <script language="javascript" type="text/javascript" src="js.js"></script>
+
 </body>
 
+<!--Footer-->
 <footer>
   <p>Computer-Ding</p>
   <p>Alle Inhalte entsprechen der Wahrheit</p>
