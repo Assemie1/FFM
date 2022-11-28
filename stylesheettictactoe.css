@@ -169,7 +169,7 @@ color: white;
 
 /* Aria Label Odin */
 .tic-tac-toe [aria-label="Odin"]{
-	background-image: url('Bilder/odint.png');
+	background-image: url('bilder/odint.png');
   background-size: 20vmin;
   background-repeat: no-repeat;
 }
