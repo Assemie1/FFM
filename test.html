@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Send Mail</title>
+  <script src=
+    "https://smtpjs.com/v3/smtp.js">
+  </script>
+ 
+  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.strato.de",
+        Username: "Info@emmifinetribute.de",
+        Password: "LW3j!w#R9r2L",
+        To: 'maxschiefer01@gmail.com',
+        From: "Info@emmifinetribute.de",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+  </script>
+</head>
+ 
+<body>
+  <form method="post">
+    <input type="button" value="Send Email"
+        onclick="sendEmail()" />
+  </form>
+</body>
+ 
+</html>
