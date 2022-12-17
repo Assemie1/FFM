@@ -3,11 +3,12 @@
  *{
     margin: 0;
     padding: 0;
-    zoom: 2;
+
 }
 
 @viewport {
   width: device-width;
+  zoom: 2;
 }
 
 /* Body einstellungen */
