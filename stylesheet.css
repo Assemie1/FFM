@@ -6,11 +6,6 @@
 
 }
 
-@viewport {
-  width: device-width;
-  zoom: 2;
-}
-
 /* Body einstellungen */
 body {
     height: 100%;
