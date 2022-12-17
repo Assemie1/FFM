@@ -136,7 +136,7 @@ nav a.active {
   width:10vw;
   height: 10vw;
   background: white;
-  border: 1px solid black;
+  border: 0.1vw solid black;
   margin: 0;
   font: 0/0 transparent;
 }
@@ -222,6 +222,7 @@ footer {
   width: 100%;
   float: left;
   padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
 }
 
 footer p{
