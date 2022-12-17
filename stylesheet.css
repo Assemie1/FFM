@@ -10,16 +10,14 @@ body {
     height: 100%;
     background-color: rgb(255, 105, 97);
     background-size: cover;
-
     
   }
 
-  /* NAVBAR */
+/* NAVBAR */
 
 /* Abstand oberkante */
 nav{
   padding-top: 15px;
-
 }
 
 /* Einstellen des Bandes */
@@ -41,11 +39,12 @@ nav ul li{
 nav ul li a{
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.75vw 0.75vw;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5vw;
   display: block;
 }
+
 
 /* Farbeffekt drüber Hovern */
 nav a:hover {
@@ -88,47 +87,78 @@ nav a.active {
 
 
 /*Wilkommens Text*/
-#StartText{
-  margin-top: 15%;
+.Start p{
+  color: black;
   font-weight: bolder;
+  font-size: 3vw;
+  position: absolute;
+  margin-top: 20%;
+  background-color: silver;
+  background-color: hsla(0, 0%, 100%, 0.5);
   text-align: center;
-  font-size: 2vw;
-  margin-top: 70px;
-  margin-bottom: 5%;
-
 }
 
 
 /*Start Bild*/
 
-.BilderHome { 
+.Start { 
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+.Start img{
+  width: 100%;
+  height: auto;
+
+}
+
+#BilderSlider{
   text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+#BilderSliderU{
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5%;
+}
+
+/*Slider*/
+.SliderBilder img{
+  width: 70%;
+  display: block;
+  margin-left: 15%;
+  margin-bottom: 1%;
   
 }
 
-.BilderHome img{
-  width: 40%;
-  height: auto;
-  
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
-  
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 /*Footer*/
 footer {
-  padding-bottom: 15px;
+  background-color: rgb(154, 206, 223);
+  margin-bottom: 15px;
   text-align: center;
   position:relative;
   width: 100%;
-  
-  
-  
+  float: left;
+  padding-top: 0.5vw;
 }
 
 footer p{
-  background-color: rgb(154, 206, 223);
-  font-size: 20px;
-
+  font-size: 1vw;
 }
 
