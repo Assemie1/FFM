@@ -73,8 +73,4 @@ document.getElementById("Richtig").onclick = function() {
     }
   };
 
-  document.getElementById("clear").onclick = function() {
-    sessionStorage.clear();
-    location.reload();
-    sessionStorage.clear();
-  }
+ 

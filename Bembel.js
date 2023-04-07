@@ -4,17 +4,17 @@ Punkte = Number(sessionStorage.getItem("Punkte"))
 document.getElementById("Richtig").onclick = function() {
   Oper = Number(sessionStorage.getItem("Oper"));
   console.log(Oper);
-  if (Oper == 3){
-    Punkte = Punkte +1;
+  if (Oper == 6){
+      Punkte = Punkte +1;
       window.alert('Richtig! Dein Punkte liegen bei: ' + Punkte);
       sessionStorage.setItem("Punkte", Punkte);
 
       document.getElementById("Richtig").disabled=true;
       document.getElementById("Falsch").disabled=true;
       document.getElementById("Falsch2").disabled=true;
-      document.getElementById("Falsch3").disabled=true;
+      document.getElementById("Richtig2").disabled=true;
       Start = 1;
-      sessionStorage.setItem("Oper", 4);
+      sessionStorage.setItem("Oper", 7);
   } else{
     window.alert("Nochmal geht nicht");
   }
@@ -22,17 +22,17 @@ document.getElementById("Richtig").onclick = function() {
 }
   document.getElementById("Falsch").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
-    if (Oper == 3){
+    if (Oper == 6){
 
-        window.alert('Falsch, Richtig wäre 1405! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
         document.getElementById("Falsch").disabled=true;
         document.getElementById("Falsch2").disabled=true;
-        document.getElementById("Falsch3").disabled=true;
+        document.getElementById("Richtig2").disabled=true;
         Start = 1;
-        sessionStorage.setItem("Oper", 4);
+        sessionStorage.setItem("Oper", 7);
     } else{
       window.alert("Nochmal geht nicht");
     }
@@ -40,36 +40,37 @@ document.getElementById("Richtig").onclick = function() {
 
   document.getElementById("Falsch2").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
-    if (Oper == 3){
+    if (Oper == 6){
 
-        window.alert('Falsch, Richtig wäre 1405! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
         document.getElementById("Falsch").disabled=true;
         document.getElementById("Falsch2").disabled=true;
-        document.getElementById("Falsch3").disabled=true;
+        document.getElementById("Richtig2").disabled=true;
         Start = 1;
-        sessionStorage.setItem("Oper", 4);
+        sessionStorage.setItem("Oper", 7);
     } else{
       window.alert("Nochmal geht nicht");
     }
   };
 
-  document.getElementById("Falsch3").onclick = function() {
+  document.getElementById("Richtig2").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
-    if (Oper == 3){
-        window.alert('Falsch, Richtig wäre 1405! Dein Punkte liegen bei: ' + Punkte);
+    console.log(Oper);
+    if (Oper == 6){
+        Punkte = Punkte +1;
+        window.alert('Richtig! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
         document.getElementById("Falsch").disabled=true;
         document.getElementById("Falsch2").disabled=true;
-        document.getElementById("Falsch3").disabled=true;
+        document.getElementById("Richtig2").disabled=true;
         Start = 1;
-        sessionStorage.setItem("Oper", 4);
+        sessionStorage.setItem("Oper", 7);
     } else{
       window.alert("Nochmal geht nicht");
     }
   };
-

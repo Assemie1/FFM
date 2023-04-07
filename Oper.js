@@ -72,9 +72,3 @@ document.getElementById("Richtig").onclick = function() {
       window.alert("Nochmal geht nicht");
     }
   };
-
-  document.getElementById("clear").onclick = function() {
-    sessionStorage.clear();
-    location.reload();
-    sessionStorage.clear();
-  }
