@@ -107,6 +107,7 @@ footer {
   text-align: center;
   font-size: 30px;
   position:absolute;
+  bottom: 0;
   width: 100%;
   height: auto;
   background-color: rgb(255, 50, 50);
