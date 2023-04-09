@@ -24,7 +24,7 @@ document.getElementById("Richtig").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
     if (Oper == 6){
 
-        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre 1. oder 4. Antwort! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
@@ -42,7 +42,7 @@ document.getElementById("Richtig").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
     if (Oper == 6){
 
-        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre 1. oder 4. Antwort! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;

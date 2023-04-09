@@ -24,7 +24,7 @@ document.getElementById("Richtig").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
     if (Oper == 5){
 
-        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre Iphigenie auf Tauris! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
@@ -42,7 +42,7 @@ document.getElementById("Richtig").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
     if (Oper == 5){
 
-        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre Iphigenie auf Tauris! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
@@ -59,7 +59,7 @@ document.getElementById("Richtig").onclick = function() {
   document.getElementById("Falsch3").onclick = function() {
     Oper = Number(sessionStorage.getItem("Oper"));
     if (Oper == 5){
-        window.alert('Falsch, Richtig wäre Kaiser und Könige! Dein Punkte liegen bei: ' + Punkte);
+        window.alert('Falsch, Richtig wäre Iphigenie auf Tauris! Dein Punkte liegen bei: ' + Punkte);
         sessionStorage.setItem("Punkte", Punkte);
   
         document.getElementById("Richtig").disabled=true;
